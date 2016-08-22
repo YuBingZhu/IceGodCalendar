@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_body_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/public_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/root_calendar_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <LinearLayout
+            android:id="@+id/root_week_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                style="@style/weekName"
+                android:text="周日"
+                android:textColor="#b1b1b1" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周一" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周二" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周三" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周四" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周五" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周六"
+                android:textColor="#b1b1b1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#b1b1b1" />
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/service_message_scroll_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" />
+
+</LinearLayout>
